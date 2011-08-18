@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @setting.name %>
+</p>
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>
+<h2>Triggers</h2>
+<%= render :partial => 'triggers/trigger',
+           :collection => @setting.triggers  %>
+<h2>Add trigger:</h2>
+<%= render :partial => 'triggers/form' %>
+

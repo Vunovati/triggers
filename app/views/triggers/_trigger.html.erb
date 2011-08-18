@@ -1,0 +1,23 @@
+  <p>
+    <b>When:</b>
+    <%= trigger.when %>
+  </p>
+  <p>
+    <b>Action:</b>
+    <%= trigger.action %>
+  </p>
+  <p>
+    <b>Time treshold:</b>
+    <%= trigger.time_treshold %>
+  </p>
+  <p>
+    <b>Total treshold:</b>
+    <%= trigger.total_treshold %>
+  </p>
+  <p>
+  <%= link_to 'Destroy trigger', [trigger.setting, trigger],
+              :confirm => 'Are you sure?',
+              :method => :delete %>
+  <%= link_to 'Edit trigger', edit_setting_trigger_path(trigger.setting, trigger) %>
+
+  </p>

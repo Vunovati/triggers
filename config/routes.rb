@@ -1,4 +1,8 @@
 Triggers::Application.routes.draw do
+  resources :settings do
+    resources :triggers
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

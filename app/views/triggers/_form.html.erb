@@ -1,0 +1,21 @@
+<%= form_for([@setting, @setting.triggers.build]) do |f| %>
+  <div class="field">
+    <%= f.label :when %>
+    <%= f.text_field :when %>
+  </div>
+  <div class="field">
+    <%= f.label :action %>
+    <%= f.text_field :action %>
+  </div>
+  <div class="field">
+    <%= f.label :time_treshold %>
+    <%= f.number_field :time_treshold %>
+  </div>
+  <div class="field">
+    <%= f.label :total_treshold %>
+    <%= f.number_field :total_treshold %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
