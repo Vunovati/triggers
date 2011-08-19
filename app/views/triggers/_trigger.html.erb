@@ -1,6 +1,6 @@
   <p>
     <b>When:</b>
-    <%= trigger.when %>
+    every <%= trigger.interval %> days
   </p>
   <p>
     <b>Action:</b>
@@ -8,11 +8,11 @@
   </p>
   <p>
     <b>Time treshold:</b>
-    <%= trigger.time_treshold %>
+    for orders older than <%= trigger.time_treshold %> days
   </p>
   <p>
     <b>Total treshold:</b>
-    <%= trigger.total_treshold %>
+    <%= trigger.total_treshold %>kn
   </p>
   <p>
   <%= link_to 'Destroy trigger', [trigger.setting, trigger],

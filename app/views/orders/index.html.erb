@@ -5,6 +5,7 @@
     <th>Customer email</th>
     <th>Total</th>
     <th>Active</th>
+    <th>Last edited</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,6 +16,7 @@
     <td><%= order.customer_email %></td>
     <td><%= order.total %></td>
     <td><%= order.active %></td>
+    <td><%= order.updated_at.to_s(:short)%>, <%= time_ago_in_words(order.updated_at)%> ago</td>
     <td><%= link_to 'Show', order %></td>
     <td><%= link_to 'Edit', edit_order_path(order) %></td>
     <td><%= link_to 'Destroy', order, :confirm => 'Are you sure?', :method => :delete %></td>

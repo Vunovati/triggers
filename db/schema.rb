@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110819141320) do
+ActiveRecord::Schema.define(:version => 20110819153015) do
 
   create_table "orders", :force => true do |t|
     t.string   "customer_email"
@@ -28,12 +28,12 @@ ActiveRecord::Schema.define(:version => 20110819141320) do
 
   create_table "triggers", :force => true do |t|
     t.integer  "setting_id"
-    t.datetime "when"
     t.string   "action"
     t.integer  "total_treshold"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "time_treshold"
+    t.integer  "interval"
   end
 
 end

@@ -1,7 +1,7 @@
 <%= form_for([@setting, @setting.triggers.build]) do |f| %>
   <div class="field">
-    <%= f.label :when %>
-    every <%= f.select :when, options_for_select(1..30)%> days
+    <%= f.label :interval %>
+    every <%= f.select :interval, options_for_select(1..30)%> days
   </div>
   <div class="field">
     <%= f.label :action %>
