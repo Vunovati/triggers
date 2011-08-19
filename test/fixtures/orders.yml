@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  customer_email: MyString
+  total: 1
+  active: false
+
+two:
+  customer_email: MyString
+  total: 1
+  active: false
+
+# == Schema Information
+#
+# Table name: orders
+#
+#  id             :integer         not null, primary key
+#  customer_email :string(255)
+#  total          :integer
+#  active         :boolean
+#  created_at     :datetime
+#  updated_at     :datetime
+#
+

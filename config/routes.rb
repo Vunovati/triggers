@@ -1,4 +1,6 @@
 Triggers::Application.routes.draw do
+  resources :orders
+
   resources :settings do
     resources :triggers
   end

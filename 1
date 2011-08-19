@@ -1,11 +1,11 @@
 <%= form_for([@setting, @setting.triggers.build]) do |f| %>
   <div class="field">
     <%= f.label :when %>
-    every <%= f.select :when, options_for_select(1..30)%> days
+    <%= f.datetime_select :when %>
   </div>
   <div class="field">
     <%= f.label :action %>
-    <%= f.select :action, options_for_select([['Send mail', :send_mail],['Delete old', :delete_old]]) %>
+    <%= f.select :action, options_for_select([['Send mail', 1],['Delete old', 2]]) %>
   </div>
   <div class="field">
     <%= f.label :time_treshold %>
