@@ -1,17 +1,19 @@
-# Use this file to easily define all of your cron jobs.
-#
-# It's helpful, but not entirely necessary to understand cron before proceeding.
-# http://en.wikipedia.org/wiki/Cron
+set :environment, "development"
 
-# Example:
-#
-# set :output, "/path/to/my/cron_log.log"
-#
-# every 2.hours do
-#   command "/usr/bin/some_great_command"
-#   runner "MyModel.some_method"
-#   rake "some:great:rake:task"
-# end
+require File.expand_path('../config/environment', __FILE__) # so we could use our database
+
+set :output, "cron_log.log"
+
+@trigger = Trigger.order("updated_at").last
+@interval = @trigger.interval
+@time_treshold = @trigger.time_treshold
+@total_treshold = @trigger.total_treshold
+@action = @trigger.get_action
+
+every @interval.minutes do
+   runner "Order.#{@action}(#{@time_treshold}.minutes.ago, #{@total_treshold})"
+end
+
 #
 # every 4.days do
 #   runner "AnotherModel.prune_old_records"
